@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@300;400;500;600;700;800&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "oxanium", cursive;
+}
+
+body{   
+    min-height: 100vh; /*O body vai ocupar 100% da tela*/
+    background: linear-gradient(to bottom, #6ab7f5, #fff);
+    text-align: center;
+}
+
+/*Configuracao do container onde esta a imagem*/
+.main-container{    
+    display: inline-block; /*Vai Garantir que o main-container vai ter o tamanho da imagem, trazendo as propriedades de um bloco e de uma linha*/
+    margin-top: 2%;
+    position: relative;
+    padding: 15px;
+    
+}
+
+/*Configuracoes da Imagem*/
+.pokedex{
+    width: 100%; /*Vai ocupar 100% do espaco da tag main-container*/
+    max-width: 370px; /*isso vai garantir que a imagem vai diminuir mas no max ate 350px, nao menos que isso*/ 
+       
+}
+
+.pokemon-image{
+    position: absolute;
+    bottom: 55%;
+    left: 50%;
+    transform: translate(-63%,20%);/*vai fazer um refinamento na hora de centralizar, posicionando a imagem no centro de acordo com o tamanho dela*/
+    height: 18%;
+}
+
+.name-data{
+    position: absolute;
+    bottom: 39%;
+    left: 30%;
+    font-weight: 600;
+    font-size: clamp(8px,5vh,25px);  /*Essa é uma funcao css para configurar tamanhos, ela recebe 3 paramentros, um valor minimo, um valor exato(valor normal desejado) e um valor maximo*/  
+    color: #aaa;
+}
+
+.pokemon-name{
+    text-transform: capitalize;
+    color: #3a444d;
+}
+
+.form{
+    display: flex;
+    position: absolute;
+    bottom: 27%;
+    left: 15%;
+    width: 65%;
+}
+
+.input-search{
+    width: 100%;
+    outline: none;
+    border: 2px solid #333;
+    padding: 4%;
+    border-radius: 5%;
+    font-weight: 600;
+    color: #3a444d;
+    font-size: clamp(8px,5vh,1rem);
+    box-shadow:-3px 4px 0 #888, -5px 7px 0 #333 ;/*Os primeiros valores referencia os eixos x e y a seguir o tamanho da sombra e a cor da sombra. E tambem é possivel colocar mais de uma sombra ao mesmo tempo no elemento*/
+}
+
+.buttons{
+    width: 65%;
+    display: flex;
+    gap: 20px;
+    position: absolute;
+    bottom:10%;
+    left: 52%;
+    transform: translate(-57%,0);
+    
+}
+
+button{
+    width: 50%; /*Para os dois botoes dividir a mesma quantidade de espacoes entre eles*/
+    background: #444444;
+    border-radius: 5%;
+    font-size: clamp(5px,5vh,1rem);
+    color: #fff;
+    font-weight: 600;
+    box-shadow: -2px 3px 0 #222, -4px 6px 0 #000;    
+}
+
+.button:active{
+    box-shadow: inset -4px 4px 0 #222; /* o inset ira fazer com que a sombra apareca dentro do botao ao inves do lado de fora*/
+    font-size: 0.9rem;
+}
